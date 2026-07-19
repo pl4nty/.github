@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:best-practices", "schedule:weekends"],
+	"extends": ["config:best-practices", "schedule:weekends", ":semanticCommits"],
 	"minimumReleaseAge": "7 days",
 	"dependencyDashboardOSVVulnerabilitySummary": "all",
 	"osvVulnerabilityAlerts": true,
