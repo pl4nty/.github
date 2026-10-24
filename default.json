@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:best-practices", "schedule:weekends", ":semanticCommits"],
+	"extends": ["config:best-practices", "schedule:weekends", ":semanticCommits", "group:allNonMajor"],
 	"timezone": "Australia/Sydney",
 	"minimumReleaseAge": "7 days",
 	"dependencyDashboardOSVVulnerabilitySummary": "all",
@@ -8,15 +8,5 @@
 	"vulnerabilityAlerts": {
 		"schedule": ["at any time"],
 		"minimumReleaseAge": null
-	},
-	"packageRules": [
-		{
-			"description": "Group minor and patch updates, like group:allNonMajor, except 0.x minor updates, which SemVer treats as breaking",
-			"groupName": "all non-major dependencies",
-			"groupSlug": "all-minor-patch",
-			"matchPackageNames": ["*"],
-			"matchUpdateTypes": ["minor", "patch"],
-			"matchJsonata": ["$not(updateType = 'minor' and $matchRegexOrGlob(currentVersion, '/^v?0[.]/'))"]
-		}
-	]
+	}
 }
