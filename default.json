@@ -3,6 +3,7 @@
 	"extends": ["config:best-practices", "schedule:weekends", ":semanticCommits", "group:allNonMajor"],
 	"timezone": "Australia/Sydney",
 	"minimumReleaseAge": "7 days",
+	"minimumReleaseAgeBehaviour": "timestamp-optional",
 	"dependencyDashboardOSVVulnerabilitySummary": "all",
 	"osvVulnerabilityAlerts": true,
 	"vulnerabilityAlerts": {
