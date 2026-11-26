@@ -9,5 +9,8 @@
 	"vulnerabilityAlerts": {
 		"schedule": ["at any time"],
 		"minimumReleaseAge": null
+	},
+	"lockFileMaintenance": {
+		"schedule": ["* * * * 0,6"]
 	}
 }
